@@ -53,19 +53,31 @@ export const CheckoutPage: React.FC = () => {
     }
 
     try {
-      const newOrder = await createOrder({
+      const orderPayload: any = {
         customerName,
-        phone,
+        phoneNumber: phone,
         whatsappNumber: sameWhatsapp ? phone : whatsapp || phone,
         address,
         city,
-        items: cart,
+        items: cart.map(item => ({
+          productId: item.product.id,
+          name: item.product.name,
+          price: item.product.price,
+          quantity: item.quantity,
+          image: item.product.image
+        })),
         subtotal,
+        discount: 0,
         shippingFee,
-        totalAmount: grandTotal,
+        total: grandTotal,
         paymentMethod,
-        notes: orderNotes,
-      });
+      };
+      
+      if (orderNotes.trim()) {
+        orderPayload.notes = orderNotes.trim();
+      }
+
+      const newOrder = await createOrder(orderPayload);
 
       // Construct WhatsApp Message
       const orderDetails = `*New Order - Jadugar Accessories*
