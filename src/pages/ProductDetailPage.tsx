@@ -62,7 +62,7 @@ export const ProductDetailPage: React.FC = () => {
         product.price * quantity
       )}\n\nPlease dispatch via Cash on Delivery.`
     );
-    window.open(`https://wa.me/923001234567?text=${text}`, '_blank');
+    window.open(`https://wa.me/923260606619?text=${text}`, '_blank');
   };
 
   const handleBuyNow = () => {

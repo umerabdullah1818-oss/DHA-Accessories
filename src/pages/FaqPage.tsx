@@ -98,7 +98,7 @@ export const FaqPage: React.FC = () => {
             Our customer service reps are active on WhatsApp from 10:00 AM to 10:00 PM every day.
           </p>
           <a
-            href="https://wa.me/923001234567?text=Salam%20Jadugar%20Accessories,%20I%20have%20a%20question"
+            href="https://wa.me/923260606619?text=Salam%20Jadugar%20Accessories,%20I%20have%20a%20question"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-6 rounded-2xl text-xs transition-all shadow-lg"

@@ -34,7 +34,7 @@ export const ProductQuickViewModal: React.FC = () => {
     const text = encodeURIComponent(
       `Hello Jadugar Accessories!\nI want to order:\n*${quickViewProduct.name}*\nQuantity: ${quantity}\nPrice: ${formatPrice(quickViewProduct.price * quantity)}\n\nPlease guide me with Cash on Delivery.`
     );
-    window.open(`https://wa.me/923001234567?text=${text}`, '_blank');
+    window.open(`https://wa.me/923260606619?text=${text}`, '_blank');
   };
 
   const handleAddToCart = () => {

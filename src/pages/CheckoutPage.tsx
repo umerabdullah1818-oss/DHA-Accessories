@@ -82,7 +82,7 @@ ${cart.map(item => `- ${item.quantity}x ${item.product.name} (Rs. ${item.product
 *Total Amount:* Rs. ${grandTotal}
 *Payment Method:* Cash on Delivery`;
 
-      const whatsappUrl = `https://wa.me/923001234567?text=${encodeURIComponent(orderDetails)}`;
+      const whatsappUrl = `https://wa.me/923260606619?text=${encodeURIComponent(orderDetails)}`;
       
       showToast(`Order #${newOrder.id} placed successfully! Redirecting to WhatsApp...`, 'success');
       

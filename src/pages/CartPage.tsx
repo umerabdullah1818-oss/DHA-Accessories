@@ -55,7 +55,7 @@ export const CartPage: React.FC = () => {
         grandTotal
       )}*\n\nPlease confirm Cash on Delivery dispatch.`
     );
-    window.open(`https://wa.me/923001234567?text=${msg}`, '_blank');
+    window.open(`https://wa.me/923260606619?text=${msg}`, '_blank');
   };
 
   if (cart.length === 0) {

@@ -45,7 +45,7 @@ export const ContactPage: React.FC = () => {
     const text = encodeURIComponent(
       `Salam Jadugar Accessories!\nName: ${name || 'Customer'}\nSubject: ${subject}\nMessage: ${message}`
     );
-    window.open(`https://wa.me/923001234567?text=${text}`, '_blank');
+    window.open(`https://wa.me/923260606619?text=${text}`, '_blank');
   };
 
   return (
@@ -90,7 +90,7 @@ export const ContactPage: React.FC = () => {
 
               <div className="space-y-6 text-sm">
                 <a
-                  href="https://wa.me/923001234567?text=Salam%20Jadugar%20Accessories,%20I%20have%20an%20inquiry"
+                  href="https://wa.me/923260606619?text=Salam%20Jadugar%20Accessories,%20I%20have%20an%20inquiry"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-start gap-4 group block p-2 -ml-2 rounded-2xl hover:bg-slate-50 transition-colors"
@@ -105,7 +105,7 @@ export const ContactPage: React.FC = () => {
                 </a>
 
                 <a
-                  href="tel:+923001234567"
+                  href="tel:+923260606619"
                   className="flex items-start gap-4 group block p-2 -ml-2 rounded-2xl hover:bg-slate-50 transition-colors"
                 >
                   <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm">

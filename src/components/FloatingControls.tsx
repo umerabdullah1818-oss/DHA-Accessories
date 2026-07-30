@@ -26,7 +26,7 @@ export const FloatingControls: React.FC = () => {
     const text = encodeURIComponent(
       'Salam Jadugar Accessories! I have a question about mobile accessories or Cash on Delivery.'
     );
-    window.open(`https://wa.me/923001234567?text=${text}`, '_blank');
+    window.open(`https://wa.me/923260606619?text=${text}`, '_blank');
   };
 
   return (
@@ -70,7 +70,7 @@ export const FloatingControls: React.FC = () => {
 
             {/* Call Now Button */}
             <a
-              href="tel:+923001234567"
+              href="tel:+923260606619"
               className="w-12 h-12 rounded-full bg-blue-600 hover:bg-blue-500 text-white shadow-xl shadow-blue-600/30 flex items-center justify-center transition-transform hover:scale-110"
               title="Call Now (0300-1234567)"
               id="floating-call-btn"
