@@ -1,0 +1,6 @@
+{
+  "name": "Jadugar Accessories",
+  "description": "Premium Pakistani mobile accessories e-commerce store featuring Cash on Delivery, WhatsApp ordering, and admin inventory management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

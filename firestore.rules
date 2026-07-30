@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Product Catalogue Rules
+    // Public users can read active products.
+    // Authenticated Admin users can read all products and write/create/update/delete.
+    match /products/{productId} {
+      allow read: if true;
+      allow create, update, delete: if request.auth != null;
+    }
+    
+    // Customer Orders Collection Rules
+    // Customers can submit (create) orders.
+    // Authenticated Admin users can view and update order status.
+    match /orders/{orderId} {
+      allow create: if true;
+      allow read, update, delete: if request.auth != null;
+    }
+    
+    // Customer Support Contact Messages Rules
+    // Customers can send messages.
+    // Authenticated Admin users can read and manage messages.
+    match /contact_messages/{messageId} {
+      allow create: if true;
+      allow read, update, delete: if request.auth != null;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "Mobile accessory item available in Jadugar Accessories catalog",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "categoryId": { "type": "string" },
+        "categoryName": { "type": "string" },
+        "price": { "type": "number" },
+        "originalPrice": { "type": "number" },
+        "image": { "type": "string" },
+        "gallery": { "type": "array" },
+        "description": { "type": "string" },
+        "features": { "type": "array" },
+        "inStock": { "type": "boolean" },
+        "stockCount": { "type": "number" },
+        "rating": { "type": "number" },
+        "reviewCount": { "type": "number" },
+        "isTopSeller": { "type": "boolean" },
+        "isNewArrival": { "type": "boolean" },
+        "isFeatured": { "type": "boolean" },
+        "brand": { "type": "string" },
+        "warranty": { "type": "string" }
+      },
+      "required": ["id", "name", "categoryId", "categoryName", "price", "image", "inStock", "stockCount"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Customer e-commerce order",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "customerName": { "type": "string" },
+        "phoneNumber": { "type": "string" },
+        "whatsappNumber": { "type": "string" },
+        "email": { "type": "string" },
+        "address": { "type": "string" },
+        "city": { "type": "string" },
+        "paymentMethod": { "type": "string" },
+        "subtotal": { "type": "number" },
+        "discount": { "type": "number" },
+        "shippingFee": { "type": "number" },
+        "total": { "type": "number" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "customerName", "phoneNumber", "address", "city", "total", "status", "createdAt"]
+    },
+    "ContactMessage": {
+      "title": "ContactMessage",
+      "description": "Customer inquiry message sent via contact form",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "message": { "type": "string" },
+        "date": { "type": "string" },
+        "read": { "type": "boolean" }
+      },
+      "required": ["id", "name", "phone", "message", "date"]
+    }
+  },
+  "firestore": {
+    "/products/{productId}": {
+      "schema": "#/entities/Product",
+      "description": "Store products collection"
+    },
+    "/orders/{orderId}": {
+      "schema": "#/entities/Order",
+      "description": "Store orders collection"
+    },
+    "/contact_messages/{messageId}": {
+      "schema": "#/entities/ContactMessage",
+      "description": "Customer contact messages collection"
+    }
+  }
+}

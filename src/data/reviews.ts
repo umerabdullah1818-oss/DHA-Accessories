@@ -1,0 +1,58 @@
+import { Review } from '../types';
+
+export const REVIEWS: Review[] = [
+  {
+    id: 'rev-01',
+    userName: 'Muhammad Ali Vance',
+    city: 'Lahore (Hall Road)',
+    rating: 5,
+    date: '3 days ago',
+    comment: 'SubhanAllah! Ordered the Jadugar 65W GaN charger & 100W braided cable. Delivered to Lahore in just 2 days via TCS. Fast charging my MacBook and S24 Ultra without any heating issue. Highly recommended shopkeeper!',
+    verifiedPurchase: true,
+  },
+  {
+    id: 'rev-02',
+    userName: 'Hamza Sheikh',
+    city: 'Karachi (Saddar)',
+    rating: 5,
+    date: '1 week ago',
+    comment: 'Ordered via WhatsApp ordering button. The response was instant, got my parcel COD in Saddar Karachi. Quality of Jadugar Pods Pro 4 is unbelievable at Rs. 3,499. Bass is super heavy and ANC works great!',
+    verifiedPurchase: true,
+  },
+  {
+    id: 'rev-03',
+    userName: 'Syeda Fatima Rizvi',
+    city: 'Islamabad',
+    rating: 5,
+    date: '2 weeks ago',
+    comment: 'Great quality covers and screen protectors! Received my MagSafe clear case for iPhone 15 Pro Max. Fits tightly and magnet is very strong on car mount.',
+    verifiedPurchase: true,
+  },
+  {
+    id: 'rev-04',
+    userName: 'Usman Chaudhry',
+    city: 'Faisalabad',
+    rating: 5,
+    date: '2 weeks ago',
+    comment: 'Cash on Delivery experience was super smooth. Rider gave parcel, I checked the box before payment. Jadugar Accessories is 100% trustworthy!',
+    verifiedPurchase: true,
+  },
+  {
+    id: 'rev-05',
+    userName: 'Bilal Ahmed',
+    city: 'Rawalpindi',
+    rating: 5,
+    date: '3 weeks ago',
+    comment: 'The 20,000mAh 22.5W power bank saved me during long electricity load shedding hours in Pindi. Charged my phone 4 times easily. 10/10 product.',
+    verifiedPurchase: true,
+  },
+  {
+    id: 'rev-06',
+    userName: 'Tariq Mehmood',
+    city: 'Peshawar',
+    rating: 5,
+    date: '1 month ago',
+    comment: 'Best price in Pakistan market. I bought 3 covers and 2 tempered glass. Screen protector quality is top notch 9H AGC glass.',
+    verifiedPurchase: true,
+  },
+];
