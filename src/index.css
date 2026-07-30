@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.hero-perspective-grid {
+  position: absolute;
+  bottom: 5%;
+  left: -25%;
+  right: -25%;
+  height: 55%;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 65px 65px;
+  transform: perspective(500px) rotateX(62deg);
+  transform-origin: center bottom;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+}
+
+/* Beautiful Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a; /* Dark slate track */
+}
+::-webkit-scrollbar-thumb {
+  background: #334155; /* Lighter slate thumb */
+  border-radius: 6px;
+  border: 2px solid #0f172a;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9; /* Sky blue on hover */
+}
+
+/* Firefox fallback */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #334155 #0f172a;
+}

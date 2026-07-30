@@ -364,7 +364,7 @@ export const AdminPage: React.FC = () => {
   // RENDER: Admin Authentication Guard
   if (!user) {
     return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4 pt-28">
         <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl space-y-6">
           <div className="text-center space-y-2">
             <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
@@ -469,7 +469,7 @@ export const AdminPage: React.FC = () => {
 
   // RENDER: Main Admin Dashboard
   return (
-    <div className="min-h-screen bg-slate-950 py-10 text-slate-100">
+    <div className="min-h-screen bg-slate-950 py-10 pt-28 text-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-8">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">

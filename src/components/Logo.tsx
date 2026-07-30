@@ -6,12 +6,14 @@ interface LogoProps {
   showTagline?: boolean;
 }
 
-export const Logo: React.FC<LogoProps> = ({ size = 'md', showTagline = true }) => {
+export const Logo: React.FC<LogoProps> = ({ variant = 'dark', size = 'md', showTagline = true }) => {
   const sizeClasses = {
     sm: { phone: 'w-8 h-9', text: 'text-base sm:text-lg', sub: 'text-[8px]' },
     md: { phone: 'w-10 h-11', text: 'text-xl sm:text-2xl', sub: 'text-[9px]' },
     lg: { phone: 'w-14 h-16', text: 'text-2xl sm:text-3xl', sub: 'text-[11px]' },
   }[size];
+
+  const isLight = variant === 'light';
 
   return (
     <div className="flex items-center gap-2.5 sm:gap-3 group select-none">
@@ -67,13 +69,15 @@ export const Logo: React.FC<LogoProps> = ({ size = 'md', showTagline = true }) =
       {/* Brand Typography */}
       <div className="flex flex-col justify-center leading-tight">
         <div className={`font-black tracking-tight ${sizeClasses.text} font-sans flex items-baseline gap-1`}>
-          <span className="text-slate-900 group-hover:text-blue-600 transition-colors">JADUGAR</span>
-          <span className="text-orange-600 font-extrabold">Accessories</span>
-          <span className="text-blue-600 font-black">.</span>
+          <span className={`${isLight ? 'text-white group-hover:text-white/90' : 'text-slate-900 group-hover:text-blue-600'} transition-colors`}>
+            JADUGAR
+          </span>
+          <span className={`${isLight ? 'text-orange-400' : 'text-orange-600'} font-extrabold hidden sm:inline`}>Accessories</span>
+          <span className={`${isLight ? 'text-cyan-400' : 'text-blue-600'} font-black hidden sm:inline`}>.</span>
         </div>
         {showTagline && (
-          <div className="flex items-center gap-1.5 mt-0.5">
-            <span className={`uppercase font-bold tracking-[0.18em] text-blue-600 ${sizeClasses.sub}`}>
+          <div className="hidden sm:flex items-center gap-1.5 mt-0.5">
+            <span className={`uppercase font-bold tracking-[0.18em] ${isLight ? 'text-cyan-400/80' : 'text-blue-600'} ${sizeClasses.sub}`}>
               Magic Of Mobile Gadgets
             </span>
           </div>

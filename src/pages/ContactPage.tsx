@@ -49,99 +49,118 @@ export const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 py-12 text-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-12">
-        <div className="text-center max-w-2xl mx-auto">
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">
-            Get In Touch
-          </span>
-          <h1 className="text-3xl sm:text-4xl font-black text-white mt-1">
-            Contact Jadugar Accessories
+    <div className="min-h-screen bg-slate-50 text-slate-900 pb-16">
+      {/* Dark Header Background with Upward Arch */}
+      <div className="relative bg-gradient-to-b from-[#1a3a4a] via-[#1e3040] to-slate-900 pt-28 pb-56 sm:pb-72 lg:pb-80 overflow-hidden">
+        <div className="absolute top-10 left-1/3 w-[500px] h-[500px] bg-teal-500/8 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-10 right-1/3 w-[400px] h-[400px] bg-blue-500/8 blur-[130px] rounded-full pointer-events-none" />
+
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center space-y-4 mb-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
+            Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">Jadugar Accessories</span>
           </h1>
-          <p className="text-xs sm:text-sm text-slate-400 mt-2">
+
+          <p className="mt-5 text-slate-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
             Have a question about phone model compatibility, delivery status, or bulk wholesale inquiries? We are here to help!
           </p>
         </div>
 
+        {/* Upward Arch Curve Background SVG (Light Color) */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+          <svg 
+            className="w-full h-32 sm:h-48 lg:h-64 text-slate-50 pointer-events-none block" 
+            viewBox="0 0 1440 200" 
+            fill="currentColor" 
+            preserveAspectRatio="none"
+          >
+            {/* Shallow white dome */}
+            <path d="M0,200 L0,150 Q720,20 1440,150 L1440,200 Z" />
+          </svg>
+        </div>
+      </div>
+
+      {/* Grid Container — Overlapping the arch boundary */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 -mt-48 sm:-mt-56 lg:-mt-72 mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
           {/* Info Side - 5 Columns */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl space-y-6">
-              <h3 className="font-extrabold text-white text-base">Store Contact Details</h3>
+            <div className="bg-white border border-slate-100 rounded-[2.5rem] p-8 shadow-xl shadow-slate-200/50 space-y-6 hover:-translate-y-1 transition-transform duration-300">
+              <h3 className="font-extrabold text-slate-900 text-lg border-b border-slate-100 pb-4">Store Contact Details</h3>
 
-              <div className="space-y-4 text-xs">
+              <div className="space-y-6 text-sm">
                 <a
                   href="https://wa.me/923001234567?text=Salam%20Jadugar%20Accessories,%20I%20have%20an%20inquiry"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-start gap-3 group block"
+                  className="flex items-start gap-4 group block p-2 -ml-2 rounded-2xl hover:bg-slate-50 transition-colors"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/20 group-hover:bg-emerald-500 group-hover:text-white transition-all">
-                    <MessageCircle className="w-5 h-5" />
+                  <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white transition-all shadow-sm">
+                    <MessageCircle className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white group-hover:text-emerald-400 transition-colors">WhatsApp Official Support</h4>
-                    <p className="text-slate-400">0300-1234567 (Click to open chat)</p>
+                    <h4 className="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">WhatsApp Official Support</h4>
+                    <p className="text-slate-500 font-medium">0300-1234567 (Click to chat)</p>
                   </div>
                 </a>
 
                 <a
                   href="tel:+923001234567"
-                  className="flex items-start gap-3 group block"
+                  className="flex items-start gap-4 group block p-2 -ml-2 rounded-2xl hover:bg-slate-50 transition-colors"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/20 group-hover:bg-blue-500 group-hover:text-white transition-all">
-                    <Phone className="w-5 h-5" />
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm">
+                    <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white group-hover:text-blue-400 transition-colors">Direct Phone Call</h4>
-                    <p className="text-slate-400">+92 300 1234567 (Click to call dialer)</p>
+                    <h4 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Direct Phone Call</h4>
+                    <p className="text-slate-500 font-medium">+92 300 1234567 (Click to call)</p>
                   </div>
                 </a>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
-                    <Mail className="w-5 h-5" />
+                <div className="flex items-start gap-4 p-2 -ml-2">
+                  <div className="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 border border-purple-100 shadow-sm">
+                    <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white">Email Inquiries</h4>
-                    <p className="text-slate-400">sales@jadugaraccessories.pk</p>
+                    <h4 className="font-bold text-slate-900">Email Inquiries</h4>
+                    <p className="text-slate-500 font-medium">sales@jadugaraccessories.pk</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/20">
-                    <MapPin className="w-5 h-5" />
+                <div className="flex items-start gap-4 p-2 -ml-2">
+                  <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 border border-amber-100 shadow-sm">
+                    <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-white">Main Outlets</h4>
-                    <p className="text-slate-400">Shop #14, Mobile Market, Hall Road, Lahore</p>
-                    <p className="text-slate-400">Saddar Mobile Market, Karachi, Pakistan</p>
+                    <h4 className="font-bold text-slate-900">Main Outlets</h4>
+                    <p className="text-slate-500 font-medium">Shop #14, Mobile Market, Hall Road, Lahore</p>
+                    <p className="text-slate-500 font-medium">Saddar Mobile Market, Karachi, Pakistan</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Map Representation Box */}
-            <div className="bg-slate-900 border border-slate-800 rounded-3xl p-5 text-center space-y-3">
-              <div className="aspect-video bg-slate-950 rounded-2xl border border-slate-800 flex items-center justify-center text-slate-500">
-                <div className="space-y-1">
-                  <MapPin className="w-8 h-8 mx-auto text-emerald-400 animate-bounce" />
-                  <p className="text-xs font-bold text-white">Hall Road Mobile Market, Lahore</p>
-                  <p className="text-[10px] text-slate-400">Central Dispatch Hub</p>
+            <div className="bg-white border border-slate-100 rounded-[2.5rem] p-6 text-center shadow-xl shadow-slate-200/50 hover:-translate-y-1 transition-transform duration-300">
+              <div className="aspect-video bg-slate-50 rounded-2xl border border-slate-100 flex items-center justify-center text-slate-500">
+                <div className="space-y-2">
+                  <MapPin className="w-8 h-8 mx-auto text-emerald-500 animate-bounce" />
+                  <p className="text-sm font-bold text-slate-900">Hall Road Mobile Market, Lahore</p>
+                  <p className="text-xs text-slate-500 font-medium">Central Dispatch Hub</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Form Side - 7 Columns */}
-          <div className="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6">
-            <h3 className="font-extrabold text-white text-lg">Send Us a Direct Message</h3>
+          <div className="lg:col-span-7 bg-white border border-slate-100 rounded-[2.5rem] p-8 sm:p-12 shadow-xl shadow-slate-200/50 space-y-8 hover:-translate-y-1 transition-transform duration-300">
+            <h3 className="font-extrabold text-slate-900 text-2xl border-b border-slate-100 pb-4">Send Us a Direct Message</h3>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1">
-                    Your Name <span className="text-rose-400">*</span>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">
+                    Your Name <span className="text-rose-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -149,13 +168,13 @@ export const ContactPage: React.FC = () => {
                     placeholder="e.g. Usman Ali"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-white"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-sm text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1">
-                    Phone / WhatsApp <span className="text-rose-400">*</span>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">
+                    Phone / WhatsApp <span className="text-rose-500">*</span>
                   </label>
                   <input
                     type="tel"
@@ -163,29 +182,29 @@ export const ContactPage: React.FC = () => {
                     placeholder="0300 1234567"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-white"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-sm text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1">Email Address</label>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">Email Address</label>
                   <input
                     type="email"
                     placeholder="usman@gmail.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-white"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-sm text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1">Subject</label>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">Subject</label>
                   <select
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-white"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-sm text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow"
                   >
                     <option value="Order Inquiry">Order Inquiry</option>
                     <option value="Product Compatibility">Product Compatibility</option>
@@ -196,35 +215,35 @@ export const ContactPage: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-300 mb-1">
-                  Message Details <span className="text-rose-400">*</span>
+                <label className="block text-sm font-bold text-slate-700 mb-2">
+                  Message Details <span className="text-rose-500">*</span>
                 </label>
                 <textarea
                   required
-                  rows={4}
+                  rows={5}
                   placeholder="Tell us what accessory or phone model you need help with..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-white"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-sm text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow resize-none"
                 />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                 <button
                   type="submit"
-                  className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20"
+                  className="bg-slate-900 hover:bg-blue-600 text-white font-bold py-4 px-6 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg hover:shadow-blue-500/25 transition-all"
                 >
-                  <Send className="w-4 h-4" />
-                  Send Web Message
+                  <Send className="w-5 h-5" />
+                  Send Message
                 </button>
 
                 <button
                   type="button"
                   onClick={handleWhatsAppDirect}
-                  className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-6 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20"
+                  className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 px-6 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg hover:shadow-emerald-500/25 transition-all"
                 >
-                  <MessageCircle className="w-4 h-4" />
-                  Send via WhatsApp
+                  <MessageCircle className="w-5 h-5" />
+                  Chat on WhatsApp
                 </button>
               </div>
             </form>
