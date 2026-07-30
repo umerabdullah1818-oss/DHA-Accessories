@@ -299,49 +299,49 @@ export const HomePage: React.FC = () => {
             <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-lg">Don't just take our word for it. Here is what our community of tech enthusiasts has to say.</p>
           </div>
 
-          <div className="flex overflow-x-auto gap-8 pb-16 snap-x snap-mandatory hide-scrollbar pt-8" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+          <div className="flex overflow-x-auto gap-6 pb-12 snap-x snap-mandatory hide-scrollbar pt-6" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {REVIEWS.map((review, i) => (
               <motion.div
                 key={review.id}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.15, type: 'spring', stiffness: 100 }}
-                className="snap-center shrink-0 w-[85vw] sm:w-[450px] relative group"
+                transition={{ delay: i * 0.1, type: 'spring', stiffness: 100 }}
+                className="snap-center shrink-0 w-[85vw] sm:w-[360px] relative"
               >
-                {/* Glowing Border Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-emerald-400 to-cyan-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-60 transition-opacity duration-500" />
+                {/* Glowing Border Effect (Static) */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-emerald-400 to-cyan-500 rounded-3xl blur-md opacity-20" />
                 
                 {/* Glassmorphic Card */}
-                <div className="relative h-full bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-10 flex flex-col justify-between hover:-translate-y-2 transition-transform duration-500">
-                  <div className="absolute top-8 right-8 text-slate-700/50 group-hover:text-blue-500/20 transition-colors duration-500">
-                    <Quote className="w-16 h-16 rotate-180" />
+                <div className="relative h-full bg-slate-900/70 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                  <div className="absolute top-6 right-6 text-slate-700/40">
+                    <Quote className="w-10 h-10 rotate-180" />
                   </div>
                   
                   <div>
-                    <div className="flex gap-1.5 mb-8">
+                    <div className="flex gap-1 mb-6">
                       {[...Array(review.rating)].map((_, index) => (
-                        <Star key={index} className="w-6 h-6 fill-amber-400 text-amber-400 filter drop-shadow-[0_0_8px_rgba(251,191,36,0.5)]" />
+                        <Star key={index} className="w-5 h-5 fill-amber-400 text-amber-400 filter drop-shadow-[0_0_8px_rgba(251,191,36,0.5)]" />
                       ))}
                       {[...Array(5 - review.rating)].map((_, index) => (
-                        <Star key={index} className="w-6 h-6 fill-slate-700 text-slate-700" />
+                        <Star key={index} className="w-5 h-5 fill-slate-700 text-slate-700" />
                       ))}
                     </div>
                     
-                    <p className="text-slate-200 font-medium leading-relaxed mb-10 relative z-10 text-lg sm:text-xl">
+                    <p className="text-slate-200 font-medium leading-relaxed mb-8 relative z-10 text-sm sm:text-base">
                       "{review.text}"
                     </p>
                   </div>
                   
-                  <div className="flex items-center gap-5 mt-auto">
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-emerald-500 p-1">
-                      <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center text-white font-black text-xl">
+                  <div className="flex items-center gap-4 mt-auto">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-emerald-500 p-[2px]">
+                      <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center text-white font-bold text-lg">
                         {review.name.charAt(0)}
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-bold text-white text-lg">{review.name}</h4>
-                      <p className="text-sm font-semibold text-emerald-400 uppercase tracking-wider">{review.location}</p>
+                      <h4 className="font-bold text-white text-base">{review.name}</h4>
+                      <p className="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">{review.location}</p>
                     </div>
                   </div>
                 </div>
