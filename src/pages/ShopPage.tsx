@@ -30,6 +30,7 @@ export const ShopPage: React.FC = () => {
   const [onSaleOnly, setOnSaleOnly] = useState(false);
   const [priceMax, setPriceMax] = useState(15000);
   const [sortBy, setSortBy] = useState<'featured' | 'latest' | 'price-low' | 'price-high' | 'rating'>('featured');
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   // Extract unique brands
   const brands = useMemo(() => {
@@ -177,104 +178,112 @@ export const ShopPage: React.FC = () => {
         {/* Filter & Search Controls Bar */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Sidebar Filters */}
-          <div className="lg:col-span-3 bg-white border border-slate-200 shadow-sm rounded-3xl p-5 space-y-6 sticky top-24">
-            <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+          <div className="lg:col-span-3 bg-white border border-slate-200 shadow-sm rounded-3xl p-5 lg:sticky lg:top-24 relative z-20">
+            <button
+              onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
+              className="flex items-center justify-between w-full pb-4 border-b border-slate-100 lg:cursor-default"
+            >
               <div className="flex items-center gap-2 font-extrabold text-slate-900 text-sm">
                 <Filter className="w-4 h-4 text-emerald-500" />
                 <span>Filters</span>
               </div>
-              <button
-                onClick={handleReset}
-                className="text-xs text-rose-500 hover:text-rose-600 flex items-center gap-1 font-semibold"
-              >
-                <RotateCcw className="w-3.5 h-3.5" /> Reset
-              </button>
-            </div>
-
-            {/* Category Filter */}
-            <div className="space-y-2">
-              <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Category</label>
-              <select
-                value={selectedCategoryId}
-                onChange={(e) => setSelectedCategoryId(e.target.value as any)}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-900 font-medium focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-              >
-                <option value="all">All Categories ({products.length})</option>
-                {CATEGORIES.map((cat) => (
-                  <option key={cat.id} value={cat.id}>
-                    {cat.name} ({cat.itemCount})
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Search Bar */}
-            <div className="relative w-full">
-              <input
-                type="text"
-                placeholder="Filter products..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 pl-9 pr-4 text-xs font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
-              />
-              <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
-            </div>
-
-            {/* Price Max Slider */}
-            <div className="space-y-2">
-              <div className="flex justify-between text-xs">
-                <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Max Price</label>
-                <span className="font-extrabold text-emerald-600">{formatPrice(priceMax)}</span>
+              <div className="flex items-center gap-3">
+                <span
+                  onClick={(e) => { e.stopPropagation(); handleReset(); }}
+                  className="text-xs text-rose-500 hover:text-rose-600 flex items-center gap-1 font-semibold"
+                >
+                  <RotateCcw className="w-3.5 h-3.5" /> Reset
+                </span>
+                <ChevronDown className={`w-4 h-4 text-slate-400 lg:hidden transition-transform duration-300 ${mobileFiltersOpen ? 'rotate-180' : ''}`} />
               </div>
-              <input
-                type="range"
-                min={300}
-                max={15000}
-                step={100}
-                value={priceMax}
-                onChange={(e) => setPriceMax(Number(e.target.value))}
-                className="w-full accent-emerald-500 cursor-pointer"
-              />
-            </div>
+            </button>
 
-            {/* Brand Filter */}
-            <div className="space-y-2">
-              <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Brand</label>
-              <select
-                value={selectedBrand}
-                onChange={(e) => setSelectedBrand(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-900 font-medium focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-              >
-                <option value="all">All Brands</option>
-                {brands.map((b) => (
-                  <option key={b} value={b}>
-                    {b}
-                  </option>
-                ))}
-              </select>
-            </div>
+            <div className={`space-y-6 overflow-hidden transition-all duration-300 ${mobileFiltersOpen ? 'max-h-[1000px] opacity-100 mt-5' : 'max-h-0 opacity-0 lg:max-h-[1000px] lg:opacity-100 lg:mt-5'}`}>
+              {/* Category Filter */}
+              <div className="space-y-2">
+                <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Category</label>
+                <select
+                  value={selectedCategoryId}
+                  onChange={(e) => setSelectedCategoryId(e.target.value as any)}
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-900 font-medium focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                >
+                  <option value="all">All Categories ({products.length})</option>
+                  {CATEGORIES.map((cat) => (
+                    <option key={cat.id} value={cat.id}>
+                      {cat.name} ({cat.itemCount})
+                    </option>
+                  ))}
+                </select>
+              </div>
 
-            {/* Checkbox toggles */}
-            <div className="space-y-3 pt-4 border-t border-slate-100">
-              <label className="flex items-center gap-2 text-xs font-semibold text-slate-700 cursor-pointer group">
+              {/* Search Bar */}
+              <div className="relative w-full">
                 <input
-                  type="checkbox"
-                  checked={inStockOnly}
-                  onChange={(e) => setInStockOnly(e.target.checked)}
-                  className="rounded border-slate-300 text-emerald-500 focus:ring-emerald-500 cursor-pointer"
+                  type="text"
+                  placeholder="Filter products..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 pl-9 pr-4 text-xs font-medium text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                 />
-                <span className="group-hover:text-slate-900 transition-colors">In Stock Only</span>
-              </label>
+                <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+              </div>
 
-              <label className="flex items-center gap-2 text-xs font-semibold text-slate-700 cursor-pointer group">
+              {/* Price Max Slider */}
+              <div className="space-y-2">
+                <div className="flex justify-between text-xs">
+                  <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Max Price</label>
+                  <span className="font-extrabold text-emerald-600">{formatPrice(priceMax)}</span>
+                </div>
                 <input
-                  type="checkbox"
-                  checked={onSaleOnly}
-                  onChange={(e) => setOnSaleOnly(e.target.checked)}
-                  className="rounded border-slate-300 text-emerald-500 focus:ring-emerald-500 cursor-pointer"
+                  type="range"
+                  min={300}
+                  max={15000}
+                  step={100}
+                  value={priceMax}
+                  onChange={(e) => setPriceMax(Number(e.target.value))}
+                  className="w-full accent-emerald-500 cursor-pointer"
                 />
-                <span className="group-hover:text-slate-900 transition-colors">On Sale / Discounted</span>
-              </label>
+              </div>
+
+              {/* Brand Filter */}
+              <div className="space-y-2">
+                <label className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Brand</label>
+                <select
+                  value={selectedBrand}
+                  onChange={(e) => setSelectedBrand(e.target.value)}
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-900 font-medium focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                >
+                  <option value="all">All Brands</option>
+                  {brands.map((b) => (
+                    <option key={b} value={b}>
+                      {b}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Checkbox toggles */}
+              <div className="space-y-3 pt-4 border-t border-slate-100">
+                <label className="flex items-center gap-2 text-xs font-semibold text-slate-700 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    checked={inStockOnly}
+                    onChange={(e) => setInStockOnly(e.target.checked)}
+                    className="rounded border-slate-300 text-emerald-500 focus:ring-emerald-500 cursor-pointer"
+                  />
+                  <span className="group-hover:text-slate-900 transition-colors">In Stock Only</span>
+                </label>
+
+                <label className="flex items-center gap-2 text-xs font-semibold text-slate-700 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    checked={onSaleOnly}
+                    onChange={(e) => setOnSaleOnly(e.target.checked)}
+                    className="rounded border-slate-300 text-emerald-500 focus:ring-emerald-500 cursor-pointer"
+                  />
+                  <span className="group-hover:text-slate-900 transition-colors">On Sale / Discounted</span>
+                </label>
+              </div>
             </div>
           </div>
 
