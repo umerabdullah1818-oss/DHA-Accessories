@@ -70,15 +70,15 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'dark', size = 'md', showT
       <div className="flex flex-col justify-center leading-tight">
         <div className={`font-black tracking-tight ${sizeClasses.text} font-sans flex items-baseline gap-1`}>
           <span className={`${isLight ? 'text-white group-hover:text-white/90' : 'text-slate-900 group-hover:text-blue-600'} transition-colors`}>
-            JADUGAR
+            Mobile
           </span>
-          <span className={`${isLight ? 'text-orange-400' : 'text-orange-600'} font-extrabold hidden sm:inline`}>Accessories</span>
+          <span className={`${isLight ? 'text-orange-400' : 'text-orange-600'} font-extrabold hidden sm:inline`}>Accessories DHA</span>
           <span className={`${isLight ? 'text-cyan-400' : 'text-blue-600'} font-black hidden sm:inline`}>.</span>
         </div>
         {showTagline && (
           <div className="hidden sm:flex items-center gap-1.5 mt-0.5">
             <span className={`uppercase font-bold tracking-[0.18em] ${isLight ? 'text-cyan-400/80' : 'text-blue-600'} ${sizeClasses.sub}`}>
-              Magic Of Mobile Gadgets
+              Premium Quality
             </span>
           </div>
         )}

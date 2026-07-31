@@ -18,16 +18,16 @@ export const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 pb-16">
       {/* Dark Header Background with Upward Arch */}
-      <div className="relative bg-gradient-to-b from-[#1a3a4a] via-[#1e3040] to-slate-900 pt-28 pb-56 sm:pb-72 lg:pb-80 overflow-hidden">
-        <div className="absolute top-10 left-1/3 w-[500px] h-[500px] bg-teal-500/8 blur-[150px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-10 right-1/3 w-[400px] h-[400px] bg-blue-500/8 blur-[130px] rounded-full pointer-events-none" />
+      <div className="relative bg-gradient-to-b from-brand-800 via-brand-900 to-brand-900 pt-28 pb-56 sm:pb-72 lg:pb-80 overflow-hidden">
+        <div className="absolute top-10 left-1/3 w-[500px] h-[500px] bg-brand-500/20 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-10 right-1/3 w-[400px] h-[400px] bg-brand-600/20 blur-[130px] rounded-full pointer-events-none" />
 
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center space-y-4 mb-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">Jadugar Accessories</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-brand-100 tracking-tight leading-tight">
+            About <span className="heading-gradient">Mobile Accessories DHA</span>
           </h1>
 
-          <p className="mt-5 text-slate-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="mt-5 text-brand-200 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
             Founded with a passion for quality mobile gadgets, we bring exact wholesale market prices directly to your phone screen with 100% Cash on Delivery.
           </p>
         </div>
@@ -92,7 +92,7 @@ export const AboutPage: React.FC = () => {
               We started small, selling hand-checked mobile covers and fast charging cables directly to local customers on busy market streets. We realized that Pakistani mobile users deserved honest prices without paying inflated mall margins.
             </p>
             <p className="text-slate-500 text-base leading-relaxed font-medium">
-              Today, Jadugar Accessories serves over 50,000 customers in Lahore, Karachi, Islamabad, Faisalabad, Multan, Peshawar, Quetta, and hundreds of small towns across the country.
+              Today, Mobile Accessories DHA serves over 50,000 customers in Lahore, Karachi, Islamabad, Faisalabad, Multan, Peshawar, Quetta, and hundreds of small towns across the country.
             </p>
           </div>
 

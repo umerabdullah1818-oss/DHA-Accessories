@@ -1,6 +1,45 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@theme {
+  --color-brand-900: #190019;
+  --color-brand-800: #2B124C;
+  --color-brand-600: #522B5B;
+  --color-brand-500: #854F6C;
+  --color-brand-200: #DFB6B2;
+  --color-brand-100: #FBE4D8;
+
+  --font-sans: "Playfair Display", serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "Playfair Display", serif;
+}
+
+body {
+  font-family: 'Playfair Display', serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, div, a, button {
+  font-family: 'Playfair Display', serif !important;
+}
+
+/* Gradient for light backgrounds (dark text) */
+.heading-gradient-dark {
+  background: linear-gradient(to right, var(--color-brand-900), var(--color-brand-800), var(--color-brand-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Gradient for dark backgrounds (light text) */
+.heading-gradient-light {
+  background: linear-gradient(to right, var(--color-brand-100), var(--color-brand-200), var(--color-brand-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
 
 .hero-perspective-grid {
   position: absolute;
@@ -9,13 +48,13 @@
   right: -25%;
   height: 55%;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    linear-gradient(rgba(251, 228, 216, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(251, 228, 216, 0.07) 1px, transparent 1px);
   background-size: 65px 65px;
   transform: perspective(500px) rotateX(62deg);
   transform-origin: center bottom;
-  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+  mask-image: linear-gradient(to top, rgba(25, 0, 25, 1) 0%, rgba(25, 0, 25, 0.4) 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, rgba(25, 0, 25, 1) 0%, rgba(25, 0, 25, 0.4) 50%, transparent 100%);
 }
 
 /* Beautiful Custom Scrollbar */
@@ -24,20 +63,20 @@
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f172a; /* Dark slate track */
+  background: var(--color-brand-900);
 }
 ::-webkit-scrollbar-thumb {
-  background: #334155; /* Lighter slate thumb */
+  background: var(--color-brand-600);
   border-radius: 6px;
-  border: 2px solid #0f172a;
+  border: 2px solid var(--color-brand-900);
   background-clip: padding-box;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0ea5e9; /* Sky blue on hover */
+  background: var(--color-brand-500);
 }
 
 /* Firefox fallback */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #334155 #0f172a;
+  scrollbar-color: var(--color-brand-600) var(--color-brand-900);
 }

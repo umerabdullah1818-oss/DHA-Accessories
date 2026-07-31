@@ -36,14 +36,14 @@ const HERO_SLIDES = [
 ];
 
 const colorMap: Record<string, { bg: string; text: string }> = {
-  cyan: { bg: 'bg-cyan-500/20', text: 'text-cyan-400' },
-  emerald: { bg: 'bg-emerald-500/20', text: 'text-emerald-400' },
-  purple: { bg: 'bg-purple-500/20', text: 'text-purple-400' },
-  blue: { bg: 'bg-blue-500/20', text: 'text-blue-400' },
-  rose: { bg: 'bg-rose-500/20', text: 'text-rose-400' },
-  amber: { bg: 'bg-amber-500/20', text: 'text-amber-400' },
-  violet: { bg: 'bg-violet-500/20', text: 'text-violet-400' },
-  teal: { bg: 'bg-teal-500/20', text: 'text-teal-400' },
+  cyan: { bg: 'bg-brand-600/20', text: 'text-brand-200' },
+  emerald: { bg: 'bg-brand-500/20', text: 'text-brand-100' },
+  purple: { bg: 'bg-brand-600/30', text: 'text-brand-200' },
+  blue: { bg: 'bg-brand-800/50', text: 'text-brand-200' },
+  rose: { bg: 'bg-brand-500/20', text: 'text-brand-100' },
+  amber: { bg: 'bg-brand-600/20', text: 'text-brand-200' },
+  violet: { bg: 'bg-brand-500/20', text: 'text-brand-200' },
+  teal: { bg: 'bg-brand-600/30', text: 'text-brand-100' },
 };
 
 const badgePositions: Record<string, { className: string; animation: number[] }> = {
@@ -68,12 +68,12 @@ export const Hero: React.FC = () => {
   const slide = HERO_SLIDES[currentSlide];
 
   return (
-    <section className="relative overflow-hidden bg-[#0A0A0A] min-h-screen flex items-center pt-36 pb-12">
+    <section className="relative overflow-hidden bg-brand-900 min-h-screen flex items-center pt-36 pb-12">
       {/* Perspective Grid Background */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-20"
         style={{
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(251, 228, 216, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(251, 228, 216, 0.2) 1px, transparent 1px)`,
           backgroundSize: '40px 40px',
           transform: 'perspective(800px) rotateX(60deg) scale(2) translateY(-20px)',
           transformOrigin: 'top center'
@@ -81,7 +81,7 @@ export const Hero: React.FC = () => {
       />
 
       {/* Central Glow - shifted right behind the image */}
-      <div className="absolute top-1/2 right-[25%] -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-blue-600/40 via-cyan-500/30 to-purple-600/20 blur-[100px] rounded-full pointer-events-none z-0" />
+      <div className="absolute top-1/2 right-[25%] -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-brand-600/40 via-brand-500/30 to-brand-800/40 blur-[100px] rounded-full pointer-events-none z-0" />
 
       {/* Main Content Grid */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -91,7 +91,7 @@ export const Hero: React.FC = () => {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl sm:text-5xl md:text-[3.5rem] font-bold text-white tracking-tight leading-[1.12]"
+            className="text-4xl sm:text-5xl md:text-[3.5rem] font-bold text-brand-100 tracking-tight leading-[1.12]"
           >
             Upgrade Your Mobile Life with Premium Accessories
           </motion.h1>
@@ -99,7 +99,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 }}
-            className="mt-5 text-slate-300 text-sm sm:text-base max-w-md mx-auto lg:mx-0 font-medium leading-relaxed"
+            className="mt-5 text-brand-200 text-sm sm:text-base max-w-md mx-auto lg:mx-0 font-medium leading-relaxed"
           >
             Original wireless headphones, high-capacity power banks, fast chargers, and luxury glass covers with 100% Cash on Delivery in Lahore & DHA.
           </motion.p>
@@ -113,15 +113,15 @@ export const Hero: React.FC = () => {
           >
             <button 
               onClick={() => setActivePage('shop')} 
-              className="px-7 py-3.5 rounded-full bg-gradient-to-r from-[#007BFF] to-[#00C6FF] text-white font-bold text-sm hover:scale-[1.02] transition-transform flex items-center gap-2 shadow-[0_0_25px_rgba(0,198,255,0.35)]"
+              className="px-7 py-3.5 rounded-full bg-gradient-to-r from-brand-600 to-brand-500 text-brand-100 font-bold text-sm hover:scale-[1.02] transition-transform flex items-center gap-2 shadow-[0_0_25px_rgba(133,79,108,0.35)]"
             >
               Shop Now <ArrowRight className="w-4 h-4" />
             </button>
             <button 
               onClick={() => setActivePage('about')} 
-              className="px-7 py-3.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-white font-bold text-sm hover:bg-white/15 transition-colors flex items-center gap-2"
+              className="px-7 py-3.5 rounded-full bg-brand-800/50 backdrop-blur-sm border border-brand-600/30 text-brand-100 font-bold text-sm hover:bg-brand-800/80 transition-colors flex items-center gap-2"
             >
-              Learn More <ArrowUpRight className="w-4 h-4 text-slate-400" />
+              Learn More <ArrowUpRight className="w-4 h-4 text-brand-200" />
             </button>
           </motion.div>
 
@@ -133,8 +133,8 @@ export const Hero: React.FC = () => {
                 onClick={() => setCurrentSlide(i)}
                 className={`h-1.5 rounded-full transition-all duration-500 ${
                   i === currentSlide 
-                    ? 'w-8 bg-gradient-to-r from-blue-500 to-cyan-400' 
-                    : 'w-4 bg-white/20 hover:bg-white/40'
+                    ? 'w-8 bg-gradient-to-r from-brand-500 to-brand-600' 
+                    : 'w-4 bg-brand-800/60 hover:bg-brand-600/60'
                 }`}
               />
             ))}
@@ -161,13 +161,13 @@ export const Hero: React.FC = () => {
                     scale: { duration: 0.4 },
                     y: { repeat: Infinity, duration: 3.5 + Math.random(), ease: "easeInOut" }
                   }}
-                  className={`absolute ${pos.className} bg-[#111111]/80 backdrop-blur-xl border border-white/10 rounded-full px-3 py-1.5 flex items-center gap-2.5 text-white shadow-2xl z-20`}
+                  className={`absolute ${pos.className} bg-brand-800/80 backdrop-blur-xl border border-brand-600/30 rounded-full px-3 py-1.5 flex items-center gap-2.5 text-brand-100 shadow-2xl z-20`}
                 >
                   <div className={`w-7 h-7 rounded-full ${colors.bg} flex items-center justify-center`}>
                     <Icon className={`w-3.5 h-3.5 ${colors.text}`} />
                   </div>
                   <div className="text-left leading-tight hidden sm:block pr-1">
-                    <span className="text-slate-400 block text-[9px]">{badge.label}</span>
+                    <span className="text-brand-200 block text-[9px]">{badge.label}</span>
                     <strong className="text-xs">{badge.value}</strong>
                   </div>
                 </motion.div>
@@ -186,7 +186,7 @@ export const Hero: React.FC = () => {
                 transition={{ duration: 0.5 }}
                 src={slide.image}
                 alt="Premium Accessory"
-                className="absolute inset-0 m-auto w-full h-full max-w-[260px] sm:max-w-[320px] md:max-w-[400px] object-contain z-10 drop-shadow-[0_0_60px_rgba(6,182,212,0.25)]"
+                className="absolute inset-0 m-auto w-full h-full max-w-[260px] sm:max-w-[320px] md:max-w-[400px] object-contain z-10 drop-shadow-[0_0_60px_rgba(82,43,91,0.4)]"
                 style={{ filter: 'contrast(1.1)' }}
               />
             </AnimatePresence>

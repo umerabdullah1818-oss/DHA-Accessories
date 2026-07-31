@@ -88,16 +88,16 @@ export const ShopPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 pb-16">
       {/* Dark Header Background with Upward Arch (Matching Red Line) */}
-      <div className="relative bg-gradient-to-b from-[#1a3a4a] via-[#1e3040] to-slate-900 pt-28 pb-56 sm:pb-72 lg:pb-80 overflow-hidden">
+      <div className="relative bg-gradient-to-b from-brand-800 via-brand-900 to-brand-900 pt-28 pb-56 sm:pb-72 lg:pb-80 overflow-hidden">
         {/* Subtle glow effects */}
-        <div className="absolute top-10 left-1/3 w-[500px] h-[500px] bg-teal-500/8 blur-[150px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-10 right-1/3 w-[400px] h-[400px] bg-blue-500/8 blur-[130px] rounded-full pointer-events-none" />
+        <div className="absolute top-10 left-1/3 w-[500px] h-[500px] bg-brand-500/20 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-10 right-1/3 w-[400px] h-[400px] bg-brand-600/20 blur-[130px] rounded-full pointer-events-none" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
           {/* Headline */}
           <div className="text-center mb-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
-              Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">Mobile</span> Accessories
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-brand-100 tracking-tight leading-tight">
+              Premium <span className="heading-gradient">Mobile</span> Accessories
               <br />for Every Need
             </h1>
             <p className="mt-5 text-slate-400 text-sm sm:text-base max-w-xl mx-auto">

@@ -63,7 +63,7 @@ const REVIEWS = [
     id: 2,
     name: "Sara Ali",
     location: "Karachi",
-    text: "The ANC earbuds I bought from Jadugar are amazing. Bass is punchy and the battery lasts forever. Best price I found online.",
+    text: "The ANC earbuds I bought from Mobile Accessories DHA are amazing. Bass is punchy and the battery lasts forever. Best price I found online.",
     rating: 5
   },
   {
@@ -115,7 +115,7 @@ export const HomePage: React.FC = () => {
               transition={{ delay: 0.1 }}
               className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900"
             >
-              Shop by <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">Category</span>
+              Shop by <span className="heading-gradient-dark">Category</span>
             </motion.h2>
           </div>
 
@@ -250,7 +250,7 @@ export const HomePage: React.FC = () => {
                 transition={{ delay: 0.1 }}
                 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900"
               >
-                Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500">Products</span>
+                Featured <span className="heading-gradient-dark">Products</span>
               </motion.h2>
             </div>
             
@@ -294,7 +294,7 @@ export const HomePage: React.FC = () => {
               viewport={{ once: true }}
               className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white"
             >
-              Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">Thousands</span>
+              Trusted by <span className="heading-gradient-light">Thousands</span>
             </motion.h2>
             <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-lg">Don't just take our word for it. Here is what our community of tech enthusiasts has to say.</p>
           </div>
@@ -373,7 +373,7 @@ export const HomePage: React.FC = () => {
               <div className="flex-1 text-center md:text-left">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-4 drop-shadow-md">
                   Upgrade Your Setup <br/>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-400">Save up to 50%</span>
+                  <span className="heading-gradient-light">Save up to 50%</span>
                 </h2>
                 <p className="text-white/90 font-medium text-sm sm:text-base mb-8 max-w-md mx-auto md:mx-0">
                   Get the best deals on premium audio gear, ultra-fast GaN chargers, and smart wearables. Don't miss out!
