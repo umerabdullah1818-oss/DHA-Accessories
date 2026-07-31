@@ -13,7 +13,7 @@ export const PolicyPage: React.FC = () => {
             Store Policies & Terms of Service
           </h1>
           <p className="text-xs text-slate-400 mt-1">
-            Jadugar Accessories - Committed to transparency across Pakistan.
+            Mobile Accessories DHA - Committed to transparency across Pakistan.
           </p>
         </div>
 
@@ -32,7 +32,7 @@ export const PolicyPage: React.FC = () => {
               <RotateCcw className="w-5 h-5 text-blue-400" /> 2. 7-Day Exchange & Return Policy
             </h2>
             <p>
-              We provide a 7-day checked warranty on all mobile accessories. If you receive a damaged product, incorrect model case, or defective charger, notify our support team on WhatsApp (0300-1234567) within 7 days of receiving your parcel. We will arrange a free replacement item or full refund.
+              We provide a 7-day checked warranty on all mobile accessories. If you receive a damaged product, incorrect model case, or defective charger, notify our support team on WhatsApp (0300-4257683) within 7 days of receiving your parcel. We will arrange a free replacement item or full refund.
             </p>
           </section>
 

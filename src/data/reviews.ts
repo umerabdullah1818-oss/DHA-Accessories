@@ -34,7 +34,7 @@ export const REVIEWS: Review[] = [
     city: 'Faisalabad',
     rating: 5,
     date: '2 weeks ago',
-    comment: 'Cash on Delivery experience was super smooth. Rider gave parcel, I checked the box before payment. Jadugar Accessories is 100% trustworthy!',
+    comment: 'Cash on Delivery experience was super smooth. Rider gave parcel, I checked the box before payment. Mobile Accessories DHA is 100% trustworthy!',
     verifiedPurchase: true,
   },
   {

@@ -43,9 +43,9 @@ export const ContactPage: React.FC = () => {
 
   const handleWhatsAppDirect = () => {
     const text = encodeURIComponent(
-      `Salam Jadugar Accessories!\nName: ${name || 'Customer'}\nSubject: ${subject}\nMessage: ${message}`
+      `Salam Mobile Accessories DHA!\nName: ${name || 'Customer'}\nSubject: ${subject}\nMessage: ${message}`
     );
-    window.open(`https://wa.me/923260606619?text=${text}`, '_blank');
+    window.open(`https://wa.me/923004257683?text=${text}`, '_blank');
   };
 
   return (
@@ -90,7 +90,7 @@ export const ContactPage: React.FC = () => {
 
               <div className="space-y-6 text-sm">
                 <a
-                  href="https://wa.me/923260606619?text=Salam%20Jadugar%20Accessories,%20I%20have%20an%20inquiry"
+                  href="https://wa.me/923004257683?text=Salam%20Mobile%20Accessories%20DHA,%20I%20have%20an%20inquiry"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-start gap-4 group block p-2 -ml-2 rounded-2xl hover:bg-slate-50 transition-colors"
@@ -100,12 +100,12 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">WhatsApp Official Support</h4>
-                    <p className="text-slate-500 font-medium">0300-1234567 (Click to chat)</p>
+                    <p className="text-slate-500 font-medium">0300-4257683 (Click to chat)</p>
                   </div>
                 </a>
 
                 <a
-                  href="tel:+923260606619"
+                  href="tel:+923004257683"
                   className="flex items-start gap-4 group block p-2 -ml-2 rounded-2xl hover:bg-slate-50 transition-colors"
                 >
                   <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm">
@@ -179,7 +179,7 @@ export const ContactPage: React.FC = () => {
                   <input
                     type="tel"
                     required
-                    placeholder="0300 1234567"
+                    placeholder="0300 4257683"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-sm text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow"

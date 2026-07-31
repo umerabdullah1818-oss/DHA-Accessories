@@ -58,11 +58,11 @@ export const ProductDetailPage: React.FC = () => {
 
   const handleWhatsAppOrder = () => {
     const text = encodeURIComponent(
-      `Salam Jadugar Accessories!\nI want to order:\n*${product.name}*\nQuantity: ${quantity}\nPrice: ${formatPrice(
+      `Salam Mobile Accessories DHA!\nI want to order:\n*${product.name}*\nQuantity: ${quantity}\nPrice: ${formatPrice(
         product.price * quantity
       )}\n\nPlease dispatch via Cash on Delivery.`
     );
-    window.open(`https://wa.me/923260606619?text=${text}`, '_blank');
+    window.open(`https://wa.me/923004257683?text=${text}`, '_blank');
   };
 
   const handleBuyNow = () => {

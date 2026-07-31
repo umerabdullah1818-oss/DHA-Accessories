@@ -114,7 +114,7 @@ export const AdminPage: React.FC = () => {
           await signOut(auth);
           setUser(null);
           setAuthError(
-            `Access Denied: The account "${currentUser.email}" is not authorized to access the Jadugar Accessories Admin Portal. Confidential store access is restricted to approved administrators only.`
+            `Access Denied: The account "${currentUser.email}" is not authorized to access the Mobile Accessories DHA Admin Portal. Confidential store access is restricted to approved administrators only.`
           );
           setAuthLoading(false);
           return;
@@ -200,7 +200,7 @@ export const AdminPage: React.FC = () => {
       price: 999,
       originalPrice: 1499,
       image: '',
-      description: 'High-quality mobile accessory item by Jadugar Accessories.',
+      description: 'High-quality mobile accessory item by Mobile Accessories DHA.',
       brand: 'Jadugar',
       warranty: '7-Day Replacement Warranty',
       stockCount: 25,
@@ -482,7 +482,7 @@ export const AdminPage: React.FC = () => {
                 {user.email}
               </span>
             </div>
-            <h1 className="text-3xl font-black text-white mt-1">Jadugar Accessories Admin</h1>
+            <h1 className="text-3xl font-black text-white mt-1">Mobile Accessories DHA Admin</h1>
           </div>
 
           <div className="flex items-center gap-3">

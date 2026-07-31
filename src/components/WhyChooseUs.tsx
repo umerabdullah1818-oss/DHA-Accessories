@@ -50,7 +50,7 @@ export const WhyChooseUs: React.FC = () => {
             Why Shop With Us
           </span>
           <h2 className="text-2xl sm:text-3xl font-black text-white mt-1">
-            Why Choose Jadugar Accessories?
+            Why Choose Mobile Accessories DHA?
           </h2>
           <p className="text-xs sm:text-sm text-slate-400 mt-2">
             We bridge physical street market prices with modern online convenience in Pakistan.

@@ -21,7 +21,7 @@ const FAQS = [
   },
   {
     q: 'How can I make sure a mobile cover or screen protector fits my exact phone?',
-    a: 'Each product listing clearly specifies the exact phone model (e.g. iPhone 15 Pro Max, Samsung S24 Ultra, Redmi Note 13 Pro). If you are unsure about your exact model name, send a quick screenshot or photo to our WhatsApp support team (0300-1234567) and we will check for you!',
+    a: 'Each product listing clearly specifies the exact phone model (e.g. iPhone 15 Pro Max, Samsung S24 Ultra, Redmi Note 13 Pro). If you are unsure about your exact model name, send a quick screenshot or photo to our WhatsApp support team (0300-4257683) and we will check for you!',
   },
   {
     q: 'Are your fast chargers safe for my phone battery?',
@@ -29,7 +29,7 @@ const FAQS = [
   },
   {
     q: 'Can I order directly on WhatsApp without filling out website forms?',
-    a: 'Absolutely! You can click the "Order via WhatsApp" button on any product page or send a message directly to 0300-1234567 with the item picture and your address.',
+    a: 'Absolutely! You can click the "Order via WhatsApp" button on any product page or send a message directly to 0300-4257683 with the item picture and your address.',
   },
 ];
 
@@ -47,7 +47,7 @@ export const FaqPage: React.FC = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-xs sm:text-sm text-slate-400 mt-2">
-            Everything you need to know about placing orders, shipping, and warranty at Jadugar Accessories.
+            Everything you need to know about placing orders, shipping, and warranty at Mobile Accessories DHA.
           </p>
         </div>
 
@@ -98,7 +98,7 @@ export const FaqPage: React.FC = () => {
             Our customer service reps are active on WhatsApp from 10:00 AM to 10:00 PM every day.
           </p>
           <a
-            href="https://wa.me/923260606619?text=Salam%20Jadugar%20Accessories,%20I%20have%20a%20question"
+            href="https://wa.me/923004257683?text=Salam%20Mobile%20Accessories%20DHA,%20I%20have%20a%20question"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-6 rounded-2xl text-xs transition-all shadow-lg"

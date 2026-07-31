@@ -49,13 +49,13 @@ export const CartPage: React.FC = () => {
       .map((i) => `• ${i.product.name} (x${i.quantity}) - ${formatPrice(i.product.price * i.quantity)}`)
       .join('\n');
     const msg = encodeURIComponent(
-      `*Jadugar Accessories - Order Request*\n\n${items}\n\nSubtotal: ${formatPrice(
+      `*Mobile Accessories DHA - Order Request*\n\n${items}\n\nSubtotal: ${formatPrice(
         subtotal
       )}\nShipping: ${shippingFee === 0 ? 'FREE' : formatPrice(shippingFee)}\n*Total: ${formatPrice(
         grandTotal
       )}*\n\nPlease confirm Cash on Delivery dispatch.`
     );
-    window.open(`https://wa.me/923260606619?text=${msg}`, '_blank');
+    window.open(`https://wa.me/923004257683?text=${msg}`, '_blank');
   };
 
   if (cart.length === 0) {

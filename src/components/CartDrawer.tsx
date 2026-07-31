@@ -60,14 +60,14 @@ export const CartDrawer: React.FC = () => {
       .join('\n');
 
     const message = encodeURIComponent(
-      `*New Order Request - Jadugar Accessories*\n\n*Cart Items:*\n${itemsList}\n\nSubtotal: ${formatPrice(
+      `*New Order Request - Mobile Accessories DHA*\n\n*Cart Items:*\n${itemsList}\n\nSubtotal: ${formatPrice(
         subtotal
       )}\nDiscount: ${formatPrice(discountAmount)}\nShipping: ${
         shippingFee === 0 ? 'FREE' : formatPrice(shippingFee)
       }\n*Total PKR: ${formatPrice(finalTotal)}*\n\nPlease confirm my Cash on Delivery order.`
     );
 
-    window.open(`https://wa.me/923260606619?text=${message}`, '_blank');
+    window.open(`https://wa.me/923004257683?text=${message}`, '_blank');
   };
 
   return (

@@ -80,7 +80,7 @@ export const CheckoutPage: React.FC = () => {
       const newOrder = await createOrder(orderPayload);
 
       // Construct WhatsApp Message
-      const orderDetails = `*New Order - Jadugar Accessories*
+      const orderDetails = `*New Order - Mobile Accessories DHA*
       
 *Customer:* ${customerName}
 *Phone:* ${phone}
@@ -94,7 +94,7 @@ ${cart.map(item => `- ${item.quantity}x ${item.product.name} (Rs. ${item.product
 *Total Amount:* Rs. ${grandTotal}
 *Payment Method:* Cash on Delivery`;
 
-      const whatsappUrl = `https://wa.me/923260606619?text=${encodeURIComponent(orderDetails)}`;
+      const whatsappUrl = `https://wa.me/923004257683?text=${encodeURIComponent(orderDetails)}`;
       
       showToast(`Order #${newOrder.id} placed successfully! Redirecting to WhatsApp...`, 'success');
       
@@ -169,7 +169,7 @@ ${cart.map(item => `- ${item.quantity}x ${item.product.name} (Rs. ${item.product
                     <input
                       type="tel"
                       required
-                      placeholder="0300 1234567"
+                      placeholder="0300 4257683"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 pl-9 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
@@ -212,7 +212,7 @@ ${cart.map(item => `- ${item.quantity}x ${item.product.name} (Rs. ${item.product
                   </label>
                   <input
                     type="tel"
-                    placeholder="0300 1234567"
+                    placeholder="0300 4257683"
                     value={whatsapp}
                     onChange={(e) => setWhatsapp(e.target.value)}
                     className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-white placeholder-slate-500"

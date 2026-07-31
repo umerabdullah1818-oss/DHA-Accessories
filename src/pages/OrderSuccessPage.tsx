@@ -35,7 +35,7 @@ export const OrderSuccessPage: React.FC = () => {
       .join('\n');
 
     const text = encodeURIComponent(
-      `*Order Confirmation - Jadugar Accessories*\n` +
+      `*Order Confirmation - Mobile Accessories DHA*\n` +
         `Order ID: *${currentOrder.id}*\n` +
         `Customer: *${currentOrder.customerName}*\n` +
         `Phone: ${currentOrder.phone}\n` +
@@ -46,7 +46,7 @@ export const OrderSuccessPage: React.FC = () => {
         `Please dispatch my parcel as soon as possible.`
     );
 
-    window.open(`https://wa.me/923260606619?text=${text}`, '_blank');
+    window.open(`https://wa.me/923004257683?text=${text}`, '_blank');
   };
 
   return (
@@ -79,7 +79,7 @@ export const OrderSuccessPage: React.FC = () => {
               <span>Speed up your dispatch via WhatsApp!</span>
             </div>
             <p className="text-xs text-slate-300">
-              Click below to send your order details directly to our WhatsApp support team (0300-1234567).
+              Click below to send your order details directly to our WhatsApp support team (0300-4257683).
             </p>
             <button
               onClick={handleSendWhatsAppConfirmation}
