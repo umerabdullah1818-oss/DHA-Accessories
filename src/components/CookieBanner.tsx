@@ -5,14 +5,14 @@ export const CookieBanner: React.FC = () => {
   const [accepted, setAccepted] = useState(true);
 
   useEffect(() => {
-    const consent = localStorage.getItem('jadugar_cookie_consent');
+    const consent = localStorage.getItem('Mobile Accessories DHA_cookie_consent');
     if (!consent) {
       setAccepted(false);
     }
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem('jadugar_cookie_consent', 'true');
+    localStorage.setItem('Mobile Accessories DHA_cookie_consent', 'true');
     setAccepted(true);
   };
 

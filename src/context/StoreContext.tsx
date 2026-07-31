@@ -109,29 +109,29 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const products = allProducts.filter((p) => p.active !== false);
 
   const [cart, setCart] = useState<CartItem[]>(() => {
-    const saved = localStorage.getItem('jadugar_cart');
+    const saved = localStorage.getItem('Mobile Accessories DHA_cart');
     return saved ? JSON.parse(saved) : [];
   });
 
   const [wishlist, setWishlist] = useState<string[]>(() => {
-    const saved = localStorage.getItem('jadugar_wishlist');
+    const saved = localStorage.getItem('Mobile Accessories DHA_wishlist');
     return saved ? JSON.parse(saved) : [];
   });
 
   const [recentlyViewed, setRecentlyViewed] = useState<string[]>(() => {
-    const saved = localStorage.getItem('jadugar_recent');
+    const saved = localStorage.getItem('Mobile Accessories DHA_recent');
     return saved ? JSON.parse(saved) : [];
   });
 
   const [compareList, setCompareList] = useState<string[]>([]);
   
   const [orders, setOrders] = useState<Order[]>(() => {
-    const saved = localStorage.getItem('jadugar_orders');
+    const saved = localStorage.getItem('Mobile Accessories DHA_orders');
     return saved ? JSON.parse(saved) : [];
   });
 
   const [contactMessages, setContactMessages] = useState<ContactMessage[]>(() => {
-    const saved = localStorage.getItem('jadugar_messages');
+    const saved = localStorage.getItem('Mobile Accessories DHA_messages');
     return saved ? JSON.parse(saved) : [];
   });
 
@@ -183,15 +183,15 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   // Sync transient user state to Local Storage
   useEffect(() => {
-    localStorage.setItem('jadugar_cart', JSON.stringify(cart));
+    localStorage.setItem('Mobile Accessories DHA_cart', JSON.stringify(cart));
   }, [cart]);
 
   useEffect(() => {
-    localStorage.setItem('jadugar_wishlist', JSON.stringify(wishlist));
+    localStorage.setItem('Mobile Accessories DHA_wishlist', JSON.stringify(wishlist));
   }, [wishlist]);
 
   useEffect(() => {
-    localStorage.setItem('jadugar_recent', JSON.stringify(recentlyViewed));
+    localStorage.setItem('Mobile Accessories DHA_recent', JSON.stringify(recentlyViewed));
   }, [recentlyViewed]);
 
   const showToast = (message: string, type: 'success' | 'info' | 'error' = 'success') => {

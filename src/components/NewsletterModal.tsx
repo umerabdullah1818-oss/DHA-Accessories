@@ -14,7 +14,7 @@ export const NewsletterSection: React.FC = () => {
       return;
     }
     setSubscribed(true);
-    showToast('Subscribed! Coupon code JADUGAR10 unlocked.', 'success');
+    showToast('Subscribed! Coupon code DHA10 unlocked.', 'success');
   };
 
   return (
@@ -35,7 +35,7 @@ export const NewsletterSection: React.FC = () => {
         {subscribed ? (
           <div className="inline-flex items-center gap-2 p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl text-emerald-400 font-bold text-sm">
             <CheckCircle2 className="w-5 h-5" />
-            <span>Thank you! Use promo code <span className="bg-emerald-500 text-slate-950 px-2 py-0.5 rounded text-xs ml-1 font-extrabold">JADUGAR10</span> for 10% off at checkout.</span>
+            <span>Thank you! Use promo code <span className="bg-emerald-500 text-slate-950 px-2 py-0.5 rounded text-xs ml-1 font-extrabold">DHA10</span> for 10% off at checkout.</span>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">

@@ -7,7 +7,7 @@ export const REVIEWS: Review[] = [
     city: 'Lahore (Hall Road)',
     rating: 5,
     date: '3 days ago',
-    comment: 'SubhanAllah! Ordered the Jadugar 65W GaN charger & 100W braided cable. Delivered to Lahore in just 2 days via TCS. Fast charging my MacBook and S24 Ultra without any heating issue. Highly recommended shopkeeper!',
+    comment: 'SubhanAllah! Ordered the DHA 65W GaN charger & 100W braided cable. Delivered to Lahore in just 2 days via TCS. Fast charging my MacBook and S24 Ultra without any heating issue. Highly recommended shopkeeper!',
     verifiedPurchase: true,
   },
   {
@@ -16,7 +16,7 @@ export const REVIEWS: Review[] = [
     city: 'Karachi (Saddar)',
     rating: 5,
     date: '1 week ago',
-    comment: 'Ordered via WhatsApp ordering button. The response was instant, got my parcel COD in Saddar Karachi. Quality of Jadugar Pods Pro 4 is unbelievable at Rs. 3,499. Bass is super heavy and ANC works great!',
+    comment: 'Ordered via WhatsApp ordering button. The response was instant, got my parcel COD in Saddar Karachi. Quality of DHA Pods Pro 4 is unbelievable at Rs. 3,499. Bass is super heavy and ANC works great!',
     verifiedPurchase: true,
   },
   {

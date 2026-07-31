@@ -32,14 +32,14 @@ export const CartPage: React.FC = () => {
 
   const handleApplyCoupon = () => {
     const code = couponCode.trim().toUpperCase();
-    if (code === 'JADUGAR10') {
+    if (code === 'DHA10') {
       setDiscountAmount(Math.round(subtotal * 0.1));
-      showToast('Promo code JADUGAR10 applied! (10% Off)', 'success');
+      showToast('Promo code DHA10 applied! (10% Off)', 'success');
     } else if (code === 'FREESHIP') {
       setDiscountAmount(shippingFee);
       showToast('Free Shipping coupon applied!', 'success');
     } else {
-      showToast('Invalid coupon code. Try "JADUGAR10" or "FREESHIP"', 'error');
+      showToast('Invalid coupon code. Try "DHA10" or "FREESHIP"', 'error');
     }
   };
 
@@ -166,7 +166,7 @@ export const CartPage: React.FC = () => {
             <div className="flex gap-2">
               <input
                 type="text"
-                placeholder="Coupon (e.g. JADUGAR10)"
+                placeholder="Coupon (e.g. DHA10)"
                 value={couponCode}
                 onChange={(e) => setCouponCode(e.target.value)}
                 className="flex-1 bg-slate-950 border border-slate-800 rounded-xl py-2 px-3 text-xs text-white uppercase"

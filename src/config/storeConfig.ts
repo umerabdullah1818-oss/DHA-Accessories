@@ -12,7 +12,7 @@ export const STORE_CONFIG = {
   phoneDisplay: import.meta.env.VITE_PHONE_DISPLAY || '+92 300 4257683',
   
   // Contact & Location
-  email: 'sales@jadugaraccessories.pk',
+  email: 'sales@mobileaccessoriesdha.pk',
   address: 'Shop #14, Mobile Market, Hall Road, Lahore, Pakistan',
   cityCoverage: 'Lahore & DHA',
   shippingFee: 200,

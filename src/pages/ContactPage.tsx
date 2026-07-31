@@ -123,7 +123,7 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900">Email Inquiries</h4>
-                    <p className="text-slate-500 font-medium">sales@jadugaraccessories.pk</p>
+                    <p className="text-slate-500 font-medium">sales@mobileaccessoriesdha.pk</p>
                   </div>
                 </div>
 

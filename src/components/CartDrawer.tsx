@@ -39,17 +39,17 @@ export const CartDrawer: React.FC = () => {
 
   const handleApplyPromo = () => {
     const code = promoInput.trim().toUpperCase();
-    if (code === 'JADUGAR10') {
+    if (code === 'DHA10') {
       const discount = Math.round(subtotal * 0.1);
       setDiscountAmount(discount);
-      setAppliedPromo('JADUGAR10 (10% Off)');
-      showToast('Promo code JADUGAR10 applied! Saved 10%', 'success');
+      setAppliedPromo('DHA10 (10% Off)');
+      showToast('Promo code DHA10 applied! Saved 10%', 'success');
     } else if (code === 'FREESHIP') {
       setDiscountAmount(shippingFee);
       setAppliedPromo('FREESHIP (Free Shipping)');
       showToast('Free shipping coupon applied!', 'success');
     } else {
-      showToast('Invalid promo code. Try "JADUGAR10" or "FREESHIP"', 'error');
+      showToast('Invalid promo code. Try "DHA10" or "FREESHIP"', 'error');
     }
   };
 
@@ -182,7 +182,7 @@ export const CartDrawer: React.FC = () => {
                 <div className="relative flex-1">
                   <input
                     type="text"
-                    placeholder="Coupon (e.g. JADUGAR10)"
+                    placeholder="Coupon (e.g. DHA10)"
                     value={promoInput}
                     onChange={(e) => setPromoInput(e.target.value)}
                     className="w-full bg-slate-900 border border-slate-800 rounded-xl py-1.5 pl-8 pr-3 text-xs text-slate-100 uppercase"

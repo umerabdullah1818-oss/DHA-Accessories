@@ -17,7 +17,7 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'dark', size = 'md', showT
 
   return (
     <div className="flex items-center gap-2.5 sm:gap-3 group select-none">
-      {/* Phone Icon with Magical Jadugar Wand & Star emblem inside */}
+      {/* Phone Icon with Magical Mobile Accessories DHA Wand & Star emblem inside */}
       <div className={`relative ${sizeClasses.phone} flex items-center justify-center shrink-0`}>
         <svg viewBox="0 0 100 120" className="w-full h-full drop-shadow-md" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Outer Phone Shell */}
@@ -43,7 +43,7 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'dark', size = 'md', showT
           {/* Top Speaker Notch */}
           <rect x="40" y="15" width="20" height="3" rx="1.5" fill="#38BDF8" />
           
-          {/* Jadugar Magic Hat & Wand Icon inside Screen */}
+          {/* Mobile Accessories DHA Magic Hat & Wand Icon inside Screen */}
           {/* Wizard Hat Base */}
           <path
             d="M 28,68 L 72,68 C 70,68 64,64 60,60 L 56,34 L 44,34 L 40,60 C 36,64 30,68 28,68 Z"

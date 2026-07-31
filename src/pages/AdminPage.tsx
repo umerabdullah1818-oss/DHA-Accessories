@@ -75,7 +75,7 @@ export const AdminPage: React.FC = () => {
     originalPrice: 1499,
     image: '',
     description: '',
-    brand: 'Jadugar',
+    brand: 'DHA',
     warranty: '7-Day Replacement',
     stockCount: 30,
     active: true,
@@ -92,9 +92,9 @@ export const AdminPage: React.FC = () => {
   // List of authorized admin email addresses
   const AUTHORIZED_ADMIN_EMAILS = [
     'gillquratulainqadeer@gmail.com',
-    'admin@jadugaraccessories.pk',
-    'admin@jadugar.pk',
-    'sales@jadugaraccessories.pk',
+    'admin@mobileaccessoriesdha.pk',
+    'admin@mobileaccessoriesdha.pk',
+    'sales@mobileaccessoriesdha.pk',
   ];
 
   // Auth state listener with admin authorization guard
@@ -201,7 +201,7 @@ export const AdminPage: React.FC = () => {
       originalPrice: 1499,
       image: '',
       description: 'High-quality mobile accessory item by Mobile Accessories DHA.',
-      brand: 'Jadugar',
+      brand: 'DHA',
       warranty: '7-Day Replacement Warranty',
       stockCount: 25,
       active: true,
@@ -209,7 +209,7 @@ export const AdminPage: React.FC = () => {
       isBestSeller: false,
       isFeatured: true,
       isNew: true,
-      tags: 'mobile,gadget,jadugar',
+      tags: 'mobile,gadget,Mobile Accessories DHA',
     });
     setIsAddProductModalOpen(true);
   };
@@ -226,7 +226,7 @@ export const AdminPage: React.FC = () => {
       originalPrice: p.originalPrice || p.price,
       image: p.image || '',
       description: p.description || '',
-      brand: p.brand || 'Jadugar',
+      brand: p.brand || 'DHA',
       warranty: p.warranty || '7-Day Replacement',
       stockCount: p.stockCount,
       active: p.active !== false,
@@ -423,7 +423,7 @@ export const AdminPage: React.FC = () => {
                 <input
                   type="email"
                   required
-                  placeholder="admin@jadugar.pk"
+                  placeholder="admin@mobileaccessoriesdha.pk"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:outline-none focus:border-emerald-500"
@@ -797,7 +797,7 @@ export const AdminPage: React.FC = () => {
                 <input
                   type="text"
                   required
-                  placeholder="e.g., Jadugar GaN 65W Fast Charger"
+                  placeholder="e.g., Mobile Accessories DHA GaN 65W Fast Charger"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-white"
